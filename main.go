@@ -28,7 +28,7 @@ func init() {
 	flag.BoolVar(&help, "h", false, "help message")
 	flag.StringVar(&url, "url", "", "harbor地址")
 	flag.StringVar(&user, "user", "", "harbor账号")
-	flag.StringVar(&password, "password", "", "harbor账号")
+	flag.StringVar(&password, "password", "", "harbor密码")
 	flag.StringVar(&projectName, "projectName", "", "projectName")
 	flag.IntVar(&keepNum, "keepNum", 5, "每个repo保留的tag个数")
 }
