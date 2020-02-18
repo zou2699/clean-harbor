@@ -68,11 +68,11 @@ func main() {
 		// fmt.Println(filterTags)
 		for _, tag := range filterTags {
 			fmt.Printf("删除image: %s:%s, 创建时间为: %s\n", repoName, tag.Name, tag.Created)
-			// err := harborClient.DeleteRepoTag(repoName, tag.Name)
-			// if err != nil {
-			// 	fmt.Printf("image: %s:%s DeleteRepoTag: %s\n", repoName, tag.Name, err)
-			// 	continue
-			// }
+			err := harborClient.DeleteRepoTag(repoName, tag.Name)
+			if err != nil {
+				fmt.Printf("image: %s:%s DeleteRepoTag: %s\n", repoName, tag.Name, err)
+				continue
+			}
 			size += tag.Size
 		}
 	}
